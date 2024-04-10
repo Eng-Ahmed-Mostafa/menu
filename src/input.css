@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.image-box {
+    @apply: "bg-red-300 relative w-[38%] max-h-full overflow-hidden rounded-e-full";
+}
+.price {
+    @apply: "block absolute w-fit bg-orange-500 text-2xl text-white font-sans font-bold rounded-full p-5 ";
+}
+.flex-center {
+    @apply: "flex justify-center items-center";
+}
+.header {
+    @apply: "h-[300px] bg-cover flex justify-center items-center text-9xl text-orange-500 text-white font-bold";
+}

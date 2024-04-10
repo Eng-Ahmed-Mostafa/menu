@@ -1,0 +1,47 @@
+.menu {
+    // start header
+    .header {
+        background-image: url("../images/poster-1.jpg");
+        h1 {
+            font-size: 72px;
+            background: -webkit-linear-gradient(#f97316,#fdba74);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    // end header
+    // start list of menu
+    .lest li {
+        // start span for name food
+        .name {
+            position: relative;
+            overflow: hidden;
+            &::before,&::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 100%;
+                border-width: 2px;
+                border-style: solid;
+                border-start-end-radius: 9999px;
+                border-end-end-radius: 9999px;
+                transform: scale(1.5);
+            }
+            &.ltr::before,&.ltr::after {
+                border-color: transparent #f97316 transparent  transparent;
+            }
+            &.rtl::before,&.rtl::after {
+                border-color: transparent transparent transparent #f97316;
+            }
+            &::before {
+                width: 47%;
+            }
+            &::after {
+                width: 40%;
+            }
+        }
+        // end span for name food
+    }
+    // end list of menu
+
+}
