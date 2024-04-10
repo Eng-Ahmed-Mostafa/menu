@@ -3,28 +3,30 @@ html
     head
         meta(charset="UTF-8")
         link(rel = "stylesheet" href = "./css/main.css")
-        link(rel = "stylesheet" href = "./output.css")
+        link(rel = "stylesheet" href = "./css/output.css")
         link(rel = "stylesheet" href = "./css/all.min.css")
+        //- script(src="https://cdn.tailwindcss.com")
     body(class="bg-black")
         - let order = ["بروست عادي","بروست حراق","برغر لحم ","برغر دجاج","شاورما كبير","شاورما صغير ","مسحب حراق","مسحب عادي","صلصة خاصة","كاتشب"];
         - let price = [5,5,3,3,2,2,5,5,0.5,0.25];
         - let srcs = ["image-1.jpeg","image-2.jpg","image-3.webp","image-4.jpg","image-5.jpeg","image-6.jpeg","image-7.jpeg","image-8.jpeg","image-9.jpg","image-10.jpeg"];
-        .menu(class = "bg-white my-[50px] max-w-[670px] mx-auto")
-            .header(class="h-[300px] bg-cover flex justify-center items-center text-9xl text-orange-500 text-white font-bold")
+        .menu
+            .header
                 h1 FOOD 
             ul.lest
                 - for(let i = 0;i < 10;i++)
                     - var direction = "rtl",pos="right";
                     - if(i%2 == 0) direction = "ltr",pos = "left"
                     li(class= "flex item-center max-h-[100px]" dir=`${direction}`)
-                        .image(class="bg-red-300 relative w-[38%] max-h-full overflow-hidden rounded-e-full")
+                        .image(class="image-box")
                             img(src= `./images/${srcs[i]}` class = "object-cover")
-                            span(class = `block absolute w-fit bg-orange-500 text-2xl text-white font-sans font-bold rounded-full p-5  top-[-20px] ${pos}-[-20px] `) $#{price[i]}
-                        span(class = `name ${direction} grow-[3] flex justify-center items-center text-3xl`) #{order[i]}
-            .footer(class= "flex justify-center items-center h-8 bg-orange-500") 
-                span(class = "flex justify-center items-center gap-2")
+                            span(class = `price top-[-20px] ${pos}-[-20px] `) $#{price[i]}
+                        span(class = `name ${direction} grow-[3] flex-center text-3xl`) #{order[i]}
+            .footer(class= "flex-center gap-[100px] h-8 bg-orange-500") 
+                span(class = "flex-center gap-2")
                     i(class = "fa-solid fa-phone text-blue-600")
                     |  010569654
-                span(class = "flex justify-center items-center gap-2")
+                span(class = "flex-center gap-2")
                     img(src="./images/whatsapp-svgrepo-com.png" class= "w-[22px]")
                     | 010203025
+
