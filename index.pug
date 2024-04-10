@@ -20,8 +20,8 @@ html
                     li(class= "flex item-center max-h-[100px]" dir=`${direction}`)
                         .image(class="image-box")
                             img(src= `./images/${srcs[i]}` class = "object-cover")
-                            span(class = `price top-[-20px] ${pos}-[-20px] `) $#{price[i]}
-                        span(class = `name ${direction} grow-[3] flex-center text-3xl`) #{order[i]}
+                            span(class = `price ${pos}-[-20px] `) $#{price[i]}
+                        span(class = `name ${direction}`) #{order[i]}
             .footer(class= "flex-center gap-[100px] h-8 bg-orange-500") 
                 span(class = "flex-center gap-2")
                     i(class = "fa-solid fa-phone text-blue-600")
